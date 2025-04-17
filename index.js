@@ -12,6 +12,8 @@ function checkResult () {
         grade = "B";
     }else if (marks >= 60){
         grade = "B+";
+    }else if (mark >=50) {
+        grade = "C"
     }else {
         grade = "F";
     }
