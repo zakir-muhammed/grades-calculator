@@ -4,7 +4,11 @@ function checkResult () {
     console.log(marks);
     let grade , status;
 
-    if (marks >= 90) {
+    if (name === "") { errorDiv.textContent = "Name cannot be empty.";
+        return;
+      }
+
+    if (marks >= 90 && marks <= 100) {
         grade = "A+";
     }else if (marks >= 80){
         grade = "A";
@@ -23,6 +27,11 @@ function checkResult () {
     }else{
         status = "FAILED"
     }
+
+    if (marks > 100) {
+        alert("Marks cannot be more than 100!");
+        return;
+      }
 
     const result = `
 Name: ${name} <br>
